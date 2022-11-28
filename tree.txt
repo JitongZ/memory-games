@@ -4,7 +4,7 @@ C:.
 |   requirements.txt
 |   tree.txt
 |   tutorial.md
-|   memory_game.py
+|   wsgi.py
 |   
 +---app
 |   |   app.py
