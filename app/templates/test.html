@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class='main'>
+    <div class='status_bar_combine'>
+        health: 
+        <div class='status_bar' id='health'>
+            <div class='heart' x='0'>
+                <i data-feather='heart' class='filled'></i>
+            </div>
+            <div class='heart' x='1'>
+                <i data-feather='heart' class='filled'></i>
+            </div>
+            <div class='heart' x='2'>
+                <i data-feather='heart' class='filled'></i>
+            </div>
+        </div>
+        combo: 
+        <div class='status_bar', id='combo'>
+            <div class='heart' x='3'>
+                <i data-feather='square'></i>
+            </div>
+            <div class='heart' x='4'>
+                <i data-feather='square'></i>
+            </div>
+            <div class='heart' x='5'>
+                <i data-feather='square'></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="win" id="win">
+        <h4>Congrats!</h4>
+        <a href='/'><button class='play'>Play again</button></a>
+    </div>
+
+    <div class="lose" id="lose">
+        <h4>You lost. Let's try with less number of items!</h4>
+        <a href='/'><button class='play'>Play again</button></a>
+    </div>
+    
+
+    <div class='show_samples', id="show_samples">
+        <h2>Let's get started and practice your short-term memory!</h2>
+        <h1>{{ placeholder }}</h1>
+    </div>
+
+   
+    <div class='begin', id="start_button">
+        <h4>Start</h4>
+    </div>
+
+    <div class='waiting', id="waiting">
+        <h4>.....</h4>
+    </div>
+
+    <div class='answer', id="answer">
+        <!-- <h4>Your answer: </h4> -->
+        <label for="answer_text" class="answer_text">Your answer: </label>
+        <input type="text" id="answer_text" class="answer_text" name="answer_text">
+        
+    </div>
+
+    <script>
+        feather.replace()
+    </script>
+
+</div>
+
+{% endblock %}
