@@ -29,7 +29,7 @@ $(document).ready(function(){
 
         var lose = document.getElementById('lose')
         lose.innerHTML = "<h4>"+data['msg']+"</h4>"+play_again_button
-        win.style.display = "flex"  
+        lose.style.display = "flex"  
     })
 
     $('.begin').click(function(){
