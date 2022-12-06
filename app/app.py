@@ -15,6 +15,15 @@ Session(app)
 
 socketio = SocketIO(app)
 
+def checkRepetition(s):
+    if len(s) <= 1:
+        return False
+    curr_char = s[0]
+    for i in range(1, len(s)):
+        if curr_char == s[i]:
+            return True
+        curr_char = s[i]
+
 def generate_numbers(length, game_type):
     session['samples'] = []
     if (game_type == "letters"):
@@ -22,7 +31,10 @@ def generate_numbers(length, game_type):
     else:
         samples = [str(x) for x in range(10)]
     for _ in range(10):
-        session['samples'].append(random.choices(samples, k=int(length)))
+        temp = random.choices(samples, k=int(length))
+        while checkRepetition(temp):
+            temp = random.choices(samples, k=int(length))
+        session['samples'].append(temp)
     session['curr_health'] = 3
     session['curr_combo'] = 0
     placeholder = "-" * int(length)
