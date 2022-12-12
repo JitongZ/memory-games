@@ -71,7 +71,7 @@ def start_game(message):
 @socketio.on('win')
 def win(message):
     sample_length = str(message['length'])
-    rsp = "Congratulations! Your short-term memory can store " + sample_length + " " + session['game_type'] + " at a time!"
+    rsp = "Congratulations! Your short-term memory can store " + sample_length + " " + session['game_type'] + " at a time! <br>Do you think that short-term memory is better represented by slots or resources?"
     socketio.emit('win_show', 
                 {'msg':rsp},
                 room=session['sid'])
@@ -80,7 +80,7 @@ def win(message):
 @socketio.on('lose')
 def lose(message):
     sample_length = str(message['length'])
-    rsp = "That was close! Seems like memorizing" + sample_length + " " + session['game_type'] + " at a time is too much for your short-term memory. Let's try with less number of items!"
+    rsp = "That was close! Seems like memorizing " + sample_length + " " + session['game_type'] + " at a time is too much for your short-term memory. <br>Let's try with less number of items! You can also try to memorize the items by chunks of 3 or 4. <br>Do you think that short-term memory is better represented by slots or resources?"
     socketio.emit('lose_show', 
                 {'msg':rsp},
                 room=session['sid'])

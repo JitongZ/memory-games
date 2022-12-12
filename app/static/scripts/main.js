@@ -102,7 +102,7 @@ $(document).ready(function(){
                 answer.style.display = "flex"
                 var samples_display = document.getElementById('show_samples')
                 // samples_display.innerHTML = '<h2>Write down the ' + game_type + '!</h2><h1>' + $("{{placeholder}}") + '</h1>'
-                samples_display.innerHTML = '<h2>Write down the ' + game_type + '!</h2><h1>'+"-".repeat(sample_length)+'</h1>'
+                samples_display.innerHTML = '<h2>Write down the ' + game_type + '! (Press Enter to Submit)</h2><h1>'+"-".repeat(sample_length)+'</h1>'
             }, 1000 * sample_length);
             counter = counter + 1
         }

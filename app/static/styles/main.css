@@ -46,17 +46,17 @@ h1 {
 }
 
 .info {
-    width: 60%;
+    width: 65%;
     text-align: left;
-    padding: 30px;
+    padding: 10px, 30px;
     color: rgb(100, 10, 10);
     background-color:rgb(251, 240, 217);
 }
 
 .info_game {
-    width: 60%;
+    width: 65%;
     text-align: center;
-    padding: 30px;
+    padding: 10px, 30px;
     background-color: rgb(100, 10, 10);
     color:rgb(251, 240, 217);
 }
@@ -108,12 +108,16 @@ h1 {
 }
 
 .show_samples {
-    width: 60%;
+    width: 65%;
     text-align: center;
     background-color: rgb(251, 240, 217);
     color:rgb(100, 10, 10);
     font-weight: 300;
     font-family: 'Eczar', 'serif';
+}
+
+.show_samples h2{
+    line-height: 60%;
 }
 
 .show_samples h1{
@@ -135,14 +139,21 @@ h1 {
 
 .play {
     padding: 10px 15px 10px 15px;
-    background-color: rgb(100, 10, 10);
-    color: rgb(251, 240, 217);
-    border: none;
+    background-color: rgb(251, 240, 217);
+    color: rgb(100, 10, 10);
+    border: 1px, dashed, rgb(100, 10, 10);
+    box-shadow: 3px 3px rgb(100, 10, 10);
     font-weight: 600;
     font-family: 'Eczar', 'serif';
     font-size: large;
     cursor: pointer;
     margin: 5px;
+}
+
+.play:hover {
+    background-color: rgb(100, 10, 10);
+    color: rgb(251, 240, 217);
+    box-shadow: 3px 3px rgb(251, 240, 217);
 }
 
 .begin {
